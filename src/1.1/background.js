@@ -1,27 +1,25 @@
 /*
-* @Author: Xelotimer
-* @Date:   04/03/2016 22:31
-* @Last Modified by:   Xelotimer
-* @Last Modified time: 04/03/2016 23:55
+* @Author: Glen McMahon
+* @Date:   03/04/2018
 */
 
 // Parametres
-var title = 'Arkalys';
-var message = 'Arkalys est en live !';
-var url_site = 'http://www.twitch.tv/arkalysfr';
+var title = 'FiveLife';
+var message = 'FiveLife est en live !';
+var url_site = 'https://www.twitch.tv/fivelifegta';
 
 // check live status
 
-$.getJSON('https://api.twitch.tv/kraken/streams/nvidiafrance', function(channel) {
+$.getJSON('https://api.twitch.tv/kraken/streams/Amouranth', function(channel) {
 
     if (channel["stream"] == null) { 
-        title = "Arkalys";
+        title = "FiveLife";
 			chrome.browserAction.setTitle({title: title});
 			chrome.browserAction.setIcon({"path":"live_off.png"});
 
     } else {
 
-        title = "Arkalys WebTV Online";
+        title = "FiveLife TV Online";
 			chrome.browserAction.setTitle({title: title});
 			chrome.browserAction.setIcon({"path":"live_on.png"});
 			chrome.notifications.create('notifsky', {type: "basic", title: title, message: message, iconUrl: "live_on.png"});
