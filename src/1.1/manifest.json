@@ -1,0 +1,19 @@
+{
+   "author": "Xelotimer",
+   "background": {
+      "scripts": [ "jquery.min.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "live_off.png",
+      "default_title": "Arkalys Extension",
+	  "default_popup": "index.html"
+   },
+   "description": "Pour savoir quand Arkalys est en live accompagné d'utilitaires divers",
+   "icons": {
+      "64": "live_on.png"
+   },
+   "manifest_version": 2,
+   "name": "Arkalys Extension",
+   "permissions": [ "tabs", "https://api.twitch.com/", "notifications" ],
+   "version": "1.0"
+}
