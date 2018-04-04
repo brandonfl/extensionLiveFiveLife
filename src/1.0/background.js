@@ -23,7 +23,7 @@ $.getJSON('https://api.twitch.tv/kraken/streams/fivelifegta?client_id=5gcmf5rxph
 			chrome.browserAction.setTitle({title: title});
 			chrome.browserAction.setIcon({"path":"live_on.png"});
 			chrome.notifications.create('notifsky', {type: "basic", title: title, message: message, iconUrl: "live_on.png"});
-    
+		
     }
 
 
