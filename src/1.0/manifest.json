@@ -8,7 +8,7 @@
       "default_title": "FiveLife Extension",
 	  "default_popup": "index.html"
    },
-   "description": "Pour savoir quand la chaine communautaire de FiveLife est en live",
+   "description": "Permet de savoir directement quand la chaine communautaire de FiveLife est en live",
    "icons": {
       "64": "assets/logo.png"
    },
