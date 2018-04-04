@@ -10,7 +10,7 @@ var url_site = 'https://www.twitch.tv/fivelifegta';
 
 // check live status
 
-$.getJSON('https://api.twitch.tv/kraken/streams/monstercat?client_id=5gcmf5rxph8zjlif4k1w013pfuvvmp', function(channel) {
+$.getJSON('https://api.twitch.tv/kraken/streams/fivelifegta?client_id=5gcmf5rxph8zjlif4k1w013pfuvvmp', function(channel) {
 
     if (channel["stream"] == null) { 
         title = "FiveLife";
