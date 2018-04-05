@@ -11,27 +11,23 @@ var url_site = 'https://www.twitch.tv/fivelifegta';
 // check live status
 
 $.getJSON('https://api.twitch.tv/kraken/streams/fivelifegta?client_id=5gcmf5rxph8zjlif4k1w013pfuvvmp', function(channel) {
-
+	
     if (channel["stream"] == null) { 
 	
-        $.getJSON('https://tmi.twitch.tv/hosts?include_logins=1&host=211293297', function(data) {
-	/*		
-	if (data["target_id"] == null) { 
-		title = "bruh";
+        $.getJSON('https://lspd-fivelife.fr/api/check_hosting.php?id=1&password=bourlay&id=211293297', function(data) {
+			
+	if (data["success"] == false) { 
+		title = "FiveLife TV Offline";
 			chrome.browserAction.setTitle({title: title});
 			chrome.browserAction.setIcon({"path":"live_off.png"});
     } else {
-		title = "FiveLife TV Online";
+		title = "FiveLife TV Hosting";
 			chrome.browserAction.setTitle({title: title});
 			chrome.browserAction.setIcon({"path":"live_on.png"});
 			chrome.notifications.create('notifsky', {type: "basic", title: title, message: message, iconUrl: "live_on.png"})
        
     }
-	*/
 	
-	title = "bruh";
-	chrome.browserAction.setTitle({title: title});
-
 
 });
 
